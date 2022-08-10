@@ -1,0 +1,52 @@
+-- select *
+-- from startups;
+
+-- select COUNT(*) as 'Number of Companies'
+-- from startups;
+
+-- select SUM(valuation)
+-- from startups;
+
+-- select max(raised) as 'Maximum Money Raised'
+-- from startups;
+
+-- select max(raised) as 'Maximum Money Raised'
+-- from startups
+-- where stage='Seed';
+
+-- select min(founded) as 'Oldest Company Founded In'
+-- from startups;
+
+-- select avg(valuation)
+-- from startups;
+
+-- select category, avg(valuation) as 'Average Valuation', count(*)
+-- from startups
+-- group by category;
+
+-- select category, round(avg(valuation), 2) as 'Average Valuation', count(*)
+-- from startups
+-- group by category;
+
+-- select category, round(avg(valuation), 2) as 'Average Valuation', count(*)
+-- from startups
+-- group by category
+-- order by 2 desc;
+
+-- select category, count(*)
+-- from startups
+-- group by category;
+
+-- select category, count(*)
+-- from startups
+-- group by category
+-- having count(*) > 3;
+
+-- select location, avg(employees)
+-- from startups
+-- group by location;
+
+select location, avg(employees)
+from startups
+group by location
+having avg(employees) > 500;
