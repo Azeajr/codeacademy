@@ -1,0 +1,61 @@
+-- select * from trips;
+-- select * from riders;
+-- select * from riders2;
+select * from cars;
+-- --Primary Keys
+-- -- id - trips
+-- -- id - riders
+-- -- id - cars
+
+-- select *
+-- from riders
+-- cross join cars;
+
+-- SELECT riders.first,
+--    riders.last,
+--    cars.model
+-- FROM riders, cars;
+
+-- select *
+-- from trips t
+-- left join riders r
+--   on t.rider_id = r.id;
+
+  -- select *
+  -- from trips t
+  -- join cars c
+  --   on t.car_id = c.id;
+
+-- select *
+-- from riders
+-- union
+-- select *
+-- from riders2;
+
+-- select round(avg(cost), 2)
+-- from trips;
+
+-- select *
+-- from riders
+-- where total_trips < 500
+--   union
+-- select *
+-- from riders2
+-- where total_trips < 500;
+
+-- select *
+-- from (select *
+-- from riders
+-- union
+-- select *
+-- from riders2)
+-- where total_trips < 500;
+
+-- select count(*)
+-- from cars
+-- where status = 'active';
+
+select *
+from cars
+order by trips_completed desc
+limit 2;
